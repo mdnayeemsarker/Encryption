@@ -12,7 +12,7 @@ class EncryptionService
 
     public function __construct()
     {
-        $keyBase = 'Asha@Bizli#01714466';
+        $keyBase = 'Abmn@!0171#Asha@Bizli#MP1234';
         $key = substr(hash('sha256', $keyBase, true), 0, 32);
         $cipher = 'AES-256-CBC';
         $iv = str_repeat(chr(0), 16);
