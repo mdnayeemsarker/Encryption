@@ -8,17 +8,16 @@ use Illuminate\Support\Facades\Log;
 
 class NHelper
 {
-    protected $encrypter;
+    protected $nHelper;
     protected $isDebug;
 
     public function __construct()
     {
-        // $keyBase = 'Abmn@!0171#Asha@Bizli#MP1234';
         $keyBase = Config::get('app.nenc_key');
         $key = substr(hash('sha256', $keyBase, true), 0, 32);
         $cipher = 'AES-256-CBC';
         $iv = str_repeat(chr(0), 16);
-        $this->encrypter = new Encrypter($key, $cipher, $iv);
+        $this->nHelper = new Encrypter($key, $cipher, $iv);
         $this->isDebug = Config::get('app.nenc_is_debug', false);
     }
     public function checkKey() {
@@ -30,7 +29,7 @@ class NHelper
     public function encryption($data)
     {
         try {
-            $encrypted = $this->encrypter->encrypt($data);
+            $encrypted = $this->nHelper->encrypt($data);
             if ($this->isDebug) {
                 Log::info('NENC Encryption: ' . $encrypted);
             }
@@ -46,7 +45,7 @@ class NHelper
     public function decryption($data)
     {
         try {
-            $decrypted = $this->encrypter->decrypt($data);
+            $decrypted = $this->nHelper->decrypt($data);
             if ($this->isDebug) {
                 Log::info('NENC Decryption: ' . $decrypted);
             }
@@ -54,6 +53,21 @@ class NHelper
         } catch (\Illuminate\Contracts\Encryption\DecryptException $e) {
             if ($this->isDebug) {
                 Log::error('NENC Decryption failed: ' . $e->getMessage());
+            }
+            return null;
+        }
+    }
+    public function mhash($data)
+    {
+        try {
+            $hash = hash('sha256', $data);
+            if ($this->isDebug) {
+                Log::info('NENC hash: ' . $hash);
+            }
+            return $hash;
+        } catch (\Exception $e) {
+            if ($this->isDebug) {
+                Log::error('NENC hash failed: ' . $e->getMessage());
             }
             return null;
         }
