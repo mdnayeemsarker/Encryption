@@ -1,6 +1,7 @@
 {
     "name": "mdnayeemsarker/encryption",
     "description": "This is an Encryption and Decryption easy to use package",
+    "version": "1.0.4",
     "type": "library",
     "license": "MIT",
     "autoload": {
