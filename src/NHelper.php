@@ -3,6 +3,7 @@
 namespace Mdnayeemsarker\Encryption;
 
 use Illuminate\Encryption\Encrypter;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
 
 class NHelper
@@ -12,7 +13,8 @@ class NHelper
 
     public function __construct()
     {
-        $keyBase = 'Abmn@!0171#Asha@Bizli#MP1234';
+        // $keyBase = 'Abmn@!0171#Asha@Bizli#MP1234';
+        $keyBase = Config::get('app.nenc_key');
         $key = substr(hash('sha256', $keyBase, true), 0, 32);
         $cipher = 'AES-256-CBC';
         $iv = str_repeat(chr(0), 16);
