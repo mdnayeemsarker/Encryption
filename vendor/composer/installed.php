@@ -3,7 +3,7 @@
         'name' => 'mdnayeemsarker/encryption',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7bbfdbdf10edc0f9fcca33adda579f377fd64bbe',
+        'reference' => '5bd29b776af1461c5b1e3aa479f48548af1c9596',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -87,7 +87,7 @@
         'mdnayeemsarker/encryption' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7bbfdbdf10edc0f9fcca33adda579f377fd64bbe',
+            'reference' => '5bd29b776af1461c5b1e3aa479f48548af1c9596',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

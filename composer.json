@@ -17,5 +17,12 @@
     "minimum-stability": "dev",
     "require": {
         "illuminate/encryption": "^8.0|^9.0|^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mdnayeemsarker\\Encryption\\Providers\\EncryptionServiceProvider"
+            ]
+        }
     }
 }
