@@ -1,6 +1,6 @@
 <?php
 
-namespace Encryption;
+namespace Mdnayeemsarker\Encryption;
 
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Facades\Log;
