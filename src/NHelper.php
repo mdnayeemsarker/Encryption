@@ -19,6 +19,13 @@ class NHelper
         $cipher = 'AES-256-CBC';
         $iv = str_repeat(chr(0), 16);
         $this->encrypter = new Encrypter($key, $cipher, $iv);
+        $this->encrypter = Config::get('app.nenc_is_debug');
+    }
+    public function checkKey() {
+        return Config::get('app.nenc_key');
+    }
+    public function checkDebug() {
+        return Config::get('app.nenc_is_debug');
     }
     public function encryption($data)
     {
