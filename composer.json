@@ -14,7 +14,7 @@
             "email": "dev.ab.nayeem@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "illuminate/encryption": "^8.0|^9.0|^10.0"
     },
