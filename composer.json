@@ -1,0 +1,21 @@
+{
+    "name": "mdnayeemsarker/encryption",
+    "description": "This is an Encryption and Decryption easy to use package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Encryption\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mdnayeemsarker",
+            "email": "dev.ab.nayeem@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/encryption": "^8.0|^9.0|^10.0"
+    }
+}
