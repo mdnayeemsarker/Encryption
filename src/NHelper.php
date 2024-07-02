@@ -32,12 +32,12 @@ class NHelper
         try {
             $encrypted = $this->encrypter->encrypt($data);
             if ($this->isDebug) {
-                Log::info('Data Encryption: ' . $encrypted);
+                Log::info('NENC Encryption: ' . $encrypted);
             }
             return $encrypted;
         } catch (\Illuminate\Contracts\Encryption\EncryptException $e) {
             if ($this->isDebug) {
-                Log::error('Encryption failed: ' . $e->getMessage());
+                Log::error('NENC Encryption failed: ' . $e->getMessage());
             }
             return 'error';
         }
@@ -48,12 +48,12 @@ class NHelper
         try {
             $decrypted = $this->encrypter->decrypt($data);
             if ($this->isDebug) {
-                Log::info('Data Decryption: ' . $decrypted);
+                Log::info('NENC Decryption: ' . $decrypted);
             }
             return $decrypted;
         } catch (\Illuminate\Contracts\Encryption\DecryptException $e) {
             if ($this->isDebug) {
-                Log::error('Decryption failed: ' . $e->getMessage());
+                Log::error('NENC Decryption failed: ' . $e->getMessage());
             }
             return null;
         }
