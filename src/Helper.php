@@ -5,7 +5,7 @@ namespace Mdnayeemsarker\Encryption;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Facades\Log;
 
-class EncryptionService
+class Helper
 {
     protected $encrypter;
     protected $isDebug;
@@ -18,7 +18,7 @@ class EncryptionService
         $iv = str_repeat(chr(0), 16);
         $this->encrypter = new Encrypter($key, $cipher, $iv);
     }
-    public function encrypt($data)
+    public function encryption($data)
     {
         try {
             $encrypted = $this->encrypter->encrypt($data);
@@ -34,7 +34,7 @@ class EncryptionService
         }
     }
 
-    public function decrypt($data)
+    public function decryption($data)
     {
         try {
             $decrypted = $this->encrypter->decrypt($data);
