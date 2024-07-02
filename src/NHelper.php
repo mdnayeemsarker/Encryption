@@ -5,7 +5,7 @@ namespace Mdnayeemsarker\Encryption;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Facades\Log;
 
-class Helper
+class NHelper
 {
     protected $encrypter;
     protected $isDebug;
