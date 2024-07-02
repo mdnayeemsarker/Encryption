@@ -1,5 +1,7 @@
 <?php
-namespace Mdnayeemsarker\Encryption;
+
+namespace Mdnayeemsarker\Encryption\Providers;
+use Mdnayeemsarker\Encryption\NHelper;
 
 use Illuminate\Support\ServiceProvider;
 
