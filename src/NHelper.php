@@ -57,7 +57,7 @@ class NHelper
             return null;
         }
     }
-    public function mhash($data)
+    public function nhash($data)
     {
         try {
             $hash = hash('sha256', $data);
